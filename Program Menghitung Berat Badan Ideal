@@ -1,0 +1,58 @@
+// Program Untuk Menghitung Berat Badan Ideal
+/* Rico Frijaya S. Pane
+   21/480631/TK/53032
+   Jacobi*/
+
+#include <iostream>
+#define min 18.5
+using namespace std;
+
+const double maks = 24.9;
+
+int main(){
+    int bb[20];
+    string nama;
+    int i, usia, bmi, bmin, bmaks, t=0;
+    float brata,tb;
+    
+    cout<<" PROGRAM UNTUK MENGHITUNG BERAT BADAN IDEAL"<<endl;
+    cout<<"==========================================="<<endl;
+    for(i=1; i<=2; i++)
+    {
+        cout<<"Nama                 = ";cin>>nama;
+        cout<<"Usia                 = ";cin>>usia;
+        cout<<"Berat Badan Anda"<<i<<"      = ";cin>>bb[i];
+        cout<<"Tinggi Badan (meter) Anda =";cin>>tb; 
+        bmi = bb[1] / (tb*tb);
+        cout<<"BMI ANDA ADALAH     : "<<bmi<<endl;
+        cout<<"---------------------------------------"<<endl;
+        
+        if (bmi<=18.5){
+            cout<<" Anda Kekurangan Berat Badan "<<endl;
+        }else if (bmi>18.5 && bmi <=25){
+            cout<<" Berat Badan Anda Ideal"<<endl;
+        }else if (bmi>25 && bmi<= 30){
+            cout<<" Anda Kelebihan Berat Badan"<<endl;
+        }else{
+            cout<<" Anda Menuju Obesitas"<<endl;
+        }
+        
+        cout<<endl;
+        cout<<"========================================="<<endl;
+        cout<<" PATOKAN MINIMAL & MAKSIMAL "<<endl;
+        cout<<"========================================="<<endl;
+        cout<<" Tinggi Badan Anda= "<<tb<<endl;
+        bmin = min*tb*tb;
+        cout<<" Berat Badan Minimal Anda ="<<bmin<<endl;
+        bmaks = maks*tb*tb;
+        cout<<" Berat Badan Maksimal Anda ="<<bmaks<<endl;
+        cout<<"========================================="<<endl;
+        cout<<endl;
+    }
+    do {
+        cout<<" TERIMA KASIH!!!!!"<<endl;
+        t++;
+    }while(t>2);
+    return 0;
+
+}
